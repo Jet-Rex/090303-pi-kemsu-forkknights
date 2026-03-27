@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace ForkKnights.GroupExample {
 
   //Имя класса должно быть фамилией
-  public class Burmin : IKnight {
+  public class Bazanov : IKnight {
     public string Archetype { get; set; }
     public string Name;
     public string Specialization;
@@ -13,7 +13,7 @@ namespace ForkKnights.GroupExample {
     public bool HasLicense;
     public List<string> PastYearLicenseList;
 
-    public Burmin() {
+    public Bazanov() {
 
       Archetype = "Cyber Detective";
       HasLicense = true;
