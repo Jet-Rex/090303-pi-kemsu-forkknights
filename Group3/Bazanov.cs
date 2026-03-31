@@ -7,35 +7,36 @@ namespace ForkKnights.GroupExample {
   public class Bazanov : IKnight {
     public string Archetype { get; set; }
     public string Name;
-    public string Specialization;
+    public string PlaneModel;
+    public int FlightHours;
     public double AccuracyRate;
-    public int NeuroDeckCharge;
-    public bool HasLicense;
-    public List<string> PastYearLicenseList;
+    public double CombatRating;
+    public bool HasFreeFlyteLicense;
+    List<string> CompletedMissions;
 
     public Bazanov() {
 
       Archetype = "Cyber Detective";
-      HasLicense = true;
+      HasFreeFlyteLicense = true;
 
-      PastYearLicenseList = new List<string> { "2517", "2312", "2099" };
-      PastYearLicenseList.Add("2075");
-      Name = "Декард-2077";
-      Specialization = "идентификация репликантов, работа с нейросетями класса «Оракул»";
-      AccuracyRate = 0.003;
-      NeuroDeckCharge = 42;
+      CompletedMissions = new List<string> { "2517", "2312", "2099" };
+      CompletedMissions.Add("2075");
+      Name = "JetRex";
+      PlaneModel = "Sinka B-2";
+      CombatRating = 3.2;
+      FlightHours = 3601;
     }
 
     public string GetJobApplication() {
 
       // Никогда не используйте тернарный оператор.
-      string licenseText = HasLicense ? "есть лицензия" : "лицензия в процессе оформления";
+      string licenseText = //HasLicense ? "есть лицензия" : "лицензия в процессе оформления";
 
       // почему где-то есть $@, а где-то нет??? и зачем @?
       // изучите что такое вребатимные строки и интерполяция
       string JobApplicationText =
       $@"🧬 Всем привет, я {Name}, кибер-детектив ({licenseText}) на отлов электроовец," +
-      $@"специализируюсь на {Specialization} 🕶️🐑 Мои способности: сканирование бинарных снов через " +
+      $@"специализируюсь на //{Specialization} 🕶️🐑 Мои способности: сканирование бинарных снов через " +
       $@"прямой интерфейс кибердек (сейчас заряжен на {NeuroDeckCharge}%), анализ эмоциональных отпечатков" +
       $@" с точностью до {AccuracyRate}%, а также чтение памяти на уровне синапсов, если клиент подпишет" +
       " нужные бумаги 📜⚡ Ищу работу в корпорации или частном секторе: готов вести внутренние " +
